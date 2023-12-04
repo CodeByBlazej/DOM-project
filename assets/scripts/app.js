@@ -111,12 +111,12 @@ const cancelAddMovieHandler = () => {
 
 const addMovieHandler = () => {
   const titleValue = userInputs[0].value;
-  const imgUrlValue = userInputs[1].value;
+  const imageUrlValue = userInputs[1].value;
   const ratingValue = userInputs[2].value;
 
   if (
     titleValue.trim() === '' ||
-    imgUrlValue.trim() === '' ||
+    imageUrlValue.trim() === '' ||
     ratingValue.trim() === '' ||
     +ratingValue < 1 ||
     +ratingValue > 5
@@ -128,7 +128,7 @@ const addMovieHandler = () => {
   const newMovie = {
     id: Math.random().toString(),
     title: titleValue,
-    image: imgUrlValue,
+    image: imageUrlValue,
     rating: ratingValue,
   };
 
